@@ -54,6 +54,10 @@ extension ViewControllerDataSource {
         callback(waiter)
     }
     
+    func getWaiter(at index: Int) -> Waiter {
+        return waiters[index]
+    }
+    
     func updateWaiters() {
         let sortByName = NSSortDescriptor(key: "name", ascending: true)
         waiters = manager.currentRestaurant().staff.sortedArray(using: [sortByName])
