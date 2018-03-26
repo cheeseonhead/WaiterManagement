@@ -58,7 +58,10 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 
 - (IBAction)addTapped:(id)sender {
     UIAlertController * alert = [UIAlertController singleInputAlertWithTitle:@"Add Waiter" message:@"" confirmTitle:@"Add" placeHolder:@"Name" handler:^(NSString * _Nonnull name) {
-        [self.dataSource addWaiter: name];
+        
+        [self.dataSource addWaiter:name callback:^(Waiter * _Nonnull waiter) {
+            [self.tableView reloadData];
+        }];
     }];
     
     [self presentViewController:alert animated:YES completion:nil];

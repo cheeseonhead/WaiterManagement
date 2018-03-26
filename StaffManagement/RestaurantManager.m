@@ -91,4 +91,10 @@
     [[self getContext] save:&error];
 }
 
+#pragma mark - DELETE
+
+- (void)deleteWaiter:(Waiter *)waiter {
+    [[self getContext] deleteObject:waiter];
+}
+
 @end

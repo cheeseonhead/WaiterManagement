@@ -22,4 +22,7 @@
 #pragma mark - POST
 - (void)save;
 
+#pragma mark - DELETE
+- (void)deleteWaiter:(Waiter *)waiter;
+
 @end

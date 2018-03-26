@@ -34,17 +34,24 @@ import UIKit
 // MARK: - Data Manipulation
 extension ViewControllerDataSource {
     
-    func addWaiter(_ name: String) {
-        let newWaiter = manager.createWaiter(name)
+    func addWaiter(_ name: String, callback: (Waiter) -> Void) {
+        let newWaiter: Waiter = manager.createWaiter(name)
         let curRestaurant = manager.currentRestaurant()
         curRestaurant?.addStaffObject(newWaiter)
         manager.save()
         updateWaiters()
-        delegate.tableView.reloadData()
+        callback(newWaiter)
     }
     
-    func deleteWaiter() {
-        
+    func deleteWaiter(at index: Int, callback: (Waiter) -> Void) {
+        guard index < waiters.count else {
+            return
+        }
+        let waiter = waiters[index]
+        manager.delete(waiter)
+        manager.save()
+        updateWaiters()
+        callback(waiter)
     }
     
     func updateWaiters() {
@@ -67,10 +74,11 @@ extension ViewControllerDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            waiters.remove(at: indexPath.row)
-            tableView.beginUpdates()
-            tableView.deleteRows(at: [indexPath], with: .left)
-            tableView.endUpdates()
+            deleteWaiter(at: indexPath.row) { _ in
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .left)
+                tableView.endUpdates()
+            }
         default:
             break
         }
