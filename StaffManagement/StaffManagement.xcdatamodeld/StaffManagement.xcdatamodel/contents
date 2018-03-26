@@ -4,12 +4,26 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="staff" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waiter" inverseName="restaurant" inverseEntity="Waiter" syncable="YES"/>
     </entity>
+    <entity name="Shift" representedClassName="Shift" parentEntity="Waiter" syncable="YES">
+        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="staff" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Waiter" inverseName="shift" inverseEntity="Waiter" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="comma"/>
+                <constraint value="separated"/>
+                <constraint value="properties"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <entity name="Waiter" representedClassName="Waiter" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="restaurant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="staff" inverseEntity="Restaurant" syncable="YES"/>
+        <relationship name="shift" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shift" inverseName="staff" inverseEntity="Shift" syncable="YES"/>
     </entity>
     <elements>
         <element name="Restaurant" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="Waiter" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="Waiter" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="Shift" positionX="-63" positionY="9" width="128" height="90"/>
     </elements>
 </model>
