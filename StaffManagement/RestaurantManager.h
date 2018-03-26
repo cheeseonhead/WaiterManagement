@@ -23,6 +23,7 @@
 #pragma mark - GET
 - (Restaurant*)currentRestaurant;
 - (NSArray<Restaurant*>*)restaurants;
+- (NSArray<Waiter*>*)waitersNamed:(NSString *)name;
 
 #pragma mark - POST
 - (void)save;

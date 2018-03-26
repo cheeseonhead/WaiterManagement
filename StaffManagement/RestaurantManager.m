@@ -89,6 +89,16 @@
     return self.restaurant;
 }
 
+- (NSArray<Waiter*>*)waitersNamed:(NSString *)name {
+    NSError * error = nil;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", name];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Waiter"];
+    request.predicate = predicate;
+    NSArray *results = [[self getContext] executeFetchRequest:request error:&error];
+    
+    return results;
+}
+
 - (NSManagedObjectContext *)getContext {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     
