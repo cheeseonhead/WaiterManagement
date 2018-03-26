@@ -12,6 +12,7 @@
 #import "Restaurant.h"
 @interface RestaurantManager()
 @property (nonatomic, retain) Restaurant *restaurant;
+
 @end
 
 @implementation RestaurantManager
@@ -27,27 +28,66 @@
     if(self.restaurant == nil)
     {
         Restaurant *aRestaurant;
-        NSError *error = nil;
-        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-        NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Restaurant"];
-        NSArray *results = [appDelegate.managedObjectContext executeFetchRequest:request error:&error];
         
-        if(results.count > 0){
-            aRestaurant = results[0];
+        NSArray<Restaurant*>* restaurants = [self getRestaurants];
+        
+        if(restaurants.count > 0){
+            aRestaurant = restaurants[0];
         }
         else{
-            NSEntityDescription *restaurantEntity = [NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:appDelegate.managedObjectContext];
-            NSEntityDescription *waiterEntity = [NSEntityDescription entityForName:@"Waiter" inManagedObjectContext:appDelegate.managedObjectContext];
-            aRestaurant = [[Restaurant alloc] initWithEntity:restaurantEntity insertIntoManagedObjectContext:appDelegate.managedObjectContext];
+            aRestaurant = [self createRestaurant:@""];
             
-            Waiter *initialWaiter = [[Waiter alloc]initWithEntity:waiterEntity insertIntoManagedObjectContext:appDelegate.managedObjectContext];
-            initialWaiter.name = NSLocalizedString(@"John Smith", nil);
+            Waiter *initialWaiter = [self createWaiter:@"John SmitL"];
             [aRestaurant addStaffObject:initialWaiter];
             
-            [appDelegate.managedObjectContext save:&error];
+            [self save];
         }
         self.restaurant = aRestaurant;
     }
     return self.restaurant;
 }
+
+#pragma mark - CREATE
+
+- (Restaurant *)createRestaurant:(NSString *)name {
+    NSEntityDescription *restaurantEntity = [NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self getContext]];
+    Restaurant * restaurant = [[Restaurant alloc] initWithEntity:restaurantEntity insertIntoManagedObjectContext:[self getContext]];
+    restaurant.name = name;
+    
+    return restaurant;
+}
+
+- (Waiter *)createWaiter:(NSString *)name {
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Waiter" inManagedObjectContext:[self getContext]];
+    Waiter * waiter = [[Waiter alloc] initWithEntity:entity insertIntoManagedObjectContext:[self getContext]];
+    waiter.name = name;
+    
+    return waiter;
+}
+
+#pragma mark - GET
+
+- (NSArray<Restaurant*>*)getRestaurants {
+    
+    NSError *error = nil;
+    NSManagedObjectContext * context = [self getContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Restaurant"];
+    NSArray *results = [context executeFetchRequest:request error:&error];
+    
+    return results;
+}
+
+- (NSManagedObjectContext *)getContext {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    
+    return appDelegate.managedObjectContext;
+}
+
+#pragma mark - PUT/POST
+
+- (void)save {
+    NSError * error;
+    [[self getContext] save:&error];
+}
+
 @end
