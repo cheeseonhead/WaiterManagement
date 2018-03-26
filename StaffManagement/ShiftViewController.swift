@@ -11,4 +11,21 @@ import UIKit
 
 class ShiftViewController: UIViewController {
     
+    // MARK: - Views
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    // MARK: State
+    var waiter: Waiter!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        guard waiter != nil else {
+            return
+        }
+        
+        
+    }
+    
 }
