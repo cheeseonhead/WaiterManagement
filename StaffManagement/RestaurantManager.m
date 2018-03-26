@@ -15,7 +15,7 @@
 @end
 
 @implementation RestaurantManager
-+ (id)sharedManager {
++ (instancetype)sharedManager {
     static RestaurantManager *sharedManager = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
