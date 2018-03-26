@@ -4,17 +4,10 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="staff" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waiter" inverseName="restaurant" inverseEntity="Waiter" syncable="YES"/>
     </entity>
-    <entity name="Shift" representedClassName="Shift" parentEntity="Waiter" syncable="YES">
+    <entity name="Shift" representedClassName="Shift" syncable="YES">
         <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="staff" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Waiter" inverseName="shift" inverseEntity="Waiter" syncable="YES"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="comma"/>
-                <constraint value="separated"/>
-                <constraint value="properties"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
     </entity>
     <entity name="Waiter" representedClassName="Waiter" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
