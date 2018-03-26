@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Restaurant.h"
+
+@class Restaurant;
+@class Waiter;
+@class Shift;
+
 @interface RestaurantManager : NSObject
 + (instancetype)sharedManager;
 
 #pragma mark - CREATE
 - (Restaurant *)createRestaurant:(NSString *)name;
 - (Waiter *)createWaiter:(NSString *)name;
+- (Shift *)createShiftStart:(NSDate*)start end:(NSDate*)end;
 
 #pragma mark - GET
 - (Restaurant*)currentRestaurant;

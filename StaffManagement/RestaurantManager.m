@@ -9,6 +9,7 @@
 #import "RestaurantManager.h"
 #import "AppDelegate.h"
 #import "Waiter.h"
+#import "Shift.h"
 #import "Restaurant.h"
 @interface RestaurantManager()
 @property (nonatomic, retain) Restaurant *restaurant;
@@ -41,6 +42,15 @@
     waiter.name = name;
     
     return waiter;
+}
+
+- (Shift *)createShiftStart:(NSDate*)start end:(NSDate*)end {
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Shift" inManagedObjectContext:[self getContext]];
+    Shift *shift = [[Shift alloc] initWithEntity:entity insertIntoManagedObjectContext:[self getContext]];
+    shift.start = start;
+    shift.end = end;
+    
+    return shift;
 }
 
 #pragma mark - GET
