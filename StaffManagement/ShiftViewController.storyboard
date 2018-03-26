@@ -39,7 +39,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MOt-Lu-wT6"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="MOt-Lu-wT6" id="ikB-bp-ut0"/>
                         <outlet property="navigationBar" destination="zCO-KX-HTH" id="Pm4-OT-Fta"/>
                         <outlet property="tableView" destination="UIg-VL-90D" id="WHT-H6-0ld"/>
                     </connections>
