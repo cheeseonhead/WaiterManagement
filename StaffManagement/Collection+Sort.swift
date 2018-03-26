@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Collection where Element: AnyObject {
+extension Collection where Element: Any {
     public func sortedArray(using descriptors: [NSSortDescriptor]) -> [Self.Element] {
         return sorted {
             for descriptor in descriptors {
