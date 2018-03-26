@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Waiter;
+
 
 @interface Restaurant : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSSet *staff;
+@property (nonatomic, retain) NSSet<Waiter*> *staff;
 @end
 
 @interface Restaurant (CoreDataGeneratedAccessors)
