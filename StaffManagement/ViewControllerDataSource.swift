@@ -13,7 +13,7 @@ import UIKit
     func waiterCell(for waiter: Waiter) -> UITableViewCell
 }
 
-@objc class ViewControllerDataSource: NSObject, UITableViewDataSource {
+@objc class ViewControllerDataSource: NSObject {
     
     var waiters: [Waiter] = []
     let manager: RestaurantManager
@@ -27,6 +27,10 @@ import UIKit
         let sortByName = NSSortDescriptor(key: "name", ascending: true)
         waiters = manager.currentRestaurant().staff.sortedArray(using: [sortByName])
     }
+}
+
+// MARK: - TableView Datasource
+extension ViewControllerDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return waiters.count
@@ -36,5 +40,16 @@ import UIKit
         return delegate.waiterCell(for: waiters[indexPath.row])
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            waiters.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .left)
+            tableView.endUpdates()
+        default:
+            break
+        }
+    }
     
 }

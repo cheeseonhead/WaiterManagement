@@ -41,12 +41,6 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
     self.isEditing = false;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 #pragma mark - Data Source Delegate
 
 - (UITableViewCell *)waiterCellFor:(Waiter *)waiter {
@@ -54,7 +48,6 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
     cell.textLabel.text = waiter.name;
     return cell;
 }
-
 
 #pragma mark - View Actions
 
