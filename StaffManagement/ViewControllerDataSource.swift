@@ -43,6 +43,10 @@ extension ViewControllerDataSource {
         delegate.tableView.reloadData()
     }
     
+    func deleteWaiter() {
+        
+    }
+    
     func updateWaiters() {
         let sortByName = NSSortDescriptor(key: "name", ascending: true)
         waiters = manager.currentRestaurant().staff.sortedArray(using: [sortByName])
