@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */; };
 		651CBBAF1AB4E1CC00F265E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBAE1AB4E1CC00F265E8 /* main.m */; };
 		651CBBB21AB4E1CC00F265E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBB11AB4E1CC00F265E8 /* AppDelegate.m */; };
 		651CBBB51AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBB31AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenderer.swift; sourceTree = "<group>"; };
 		651CBBA91AB4E1CC00F265E8 /* StaffManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaffManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651CBBAD1AB4E1CC00F265E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		651CBBAE1AB4E1CC00F265E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,10 +101,12 @@
 				651CBBD61AB4E31400F265E8 /* RestaurantManager.m */,
 				651CBBB61AB4E1CD00F265E8 /* ViewController.h */,
 				651CBBB71AB4E1CD00F265E8 /* ViewController.m */,
+				3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */,
 				651CBBB91AB4E1CD00F265E8 /* Main.storyboard */,
-				651CBBBC1AB4E1CD00F265E8 /* Images.xcassets */,
 				651CBBBE1AB4E1CD00F265E8 /* LaunchScreen.xib */,
 				651CBBDE1AB4E4AC00F265E8 /* Core Data */,
+				651CBBBC1AB4E1CD00F265E8 /* Images.xcassets */,
+				3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */,
 				651CBBAC1AB4E1CC00F265E8 /* Supporting Files */,
 			);
 			path = StaffManagement;
@@ -194,6 +199,7 @@
 				TargetAttributes = {
 					651CBBA81AB4E1CC00F265E8 = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0920;
 					};
 					651CBBC41AB4E1CD00F265E8 = {
 						CreatedOnToolsVersion = 6.2;
@@ -250,6 +256,7 @@
 				651CBBB21AB4E1CC00F265E8 /* AppDelegate.m in Sources */,
 				651CBBB81AB4E1CD00F265E8 /* ViewController.m in Sources */,
 				651CBBDD1AB4E4A100F265E8 /* Waiter.m in Sources */,
+				3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */,
 				651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */,
 				651CBBAF1AB4E1CC00F265E8 /* main.m in Sources */,
 			);
@@ -392,10 +399,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StaffManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TouchBistro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StaffManagement/StaffManagement-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -403,16 +414,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StaffManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TouchBistro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StaffManagement/StaffManagement-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		651CBBD31AB4E1CD00F265E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -433,6 +448,7 @@
 		651CBBD41AB4E1CD00F265E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
