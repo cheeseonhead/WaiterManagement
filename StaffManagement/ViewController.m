@@ -44,7 +44,10 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 #pragma mark - TableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Test");
+    UIStoryboard * sb = [UIStoryboard storyboardWithName:@"ShiftViewController" bundle:nil];
+    ShiftViewController * shiftVC = (ShiftViewController *)[sb instantiateInitialViewController];
+    
+    [self.navigationController pushViewController:shiftVC animated:YES];
 }
 
 #pragma mark - Data Source Delegate
@@ -65,8 +68,10 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 - (IBAction)addTapped:(id)sender {
     UIAlertController * alert = [UIAlertController singleInputAlertWithTitle:@"Add Waiter" message:@"" confirmTitle:@"Add" placeHolder:@"Name" handler:^(NSString * _Nonnull name) {
         
+        __weak typeof(self) weakSelf = self;
         [self.dataSource addWaiter:name callback:^(Waiter * _Nonnull waiter) {
-            [self.tableView reloadData];
+            __strong typeof(self) strongSelf = weakSelf;
+            [strongSelf.tableView reloadData];
         }];
     }];
     
