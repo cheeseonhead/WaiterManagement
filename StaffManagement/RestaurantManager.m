@@ -57,13 +57,7 @@
 #pragma mark - GET
 
 - (NSArray<Restaurant*>*)restaurants {
-    
-    NSError *error = nil;
-    NSManagedObjectContext * context = [self getContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Restaurant"];
-    NSArray *results = [context executeFetchRequest:request error:&error];
-    
-    return results;
+    return [self entities:@"Restaurant" named:nil];
 }
 
 -(Restaurant*)currentRestaurant{
@@ -89,11 +83,16 @@
     return self.restaurant;
 }
 
-- (NSArray<Waiter*>*)waitersNamed:(NSString *)name {
+- (NSArray<Waiter*>*)waitersNamed:(NSString  * _Nullable )name {
+    return [self entities:@"Waiter" named:name];
+}
+
+- (NSArray*)entities:(NSString *)entity named:(NSString *)nameOfNil {
     NSError * error = nil;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", name];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Waiter"];
-    request.predicate = predicate;
+    if (nameOfNil != nil) {
+        request.predicate = [NSPredicate predicateWithFormat:@"name = %@", nameOfNil];
+    }
     NSArray *results = [[self getContext] executeFetchRequest:request error:&error];
     
     return results;
