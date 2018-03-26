@@ -7,3 +7,34 @@
 //
 
 import Foundation
+import UIKit
+
+@objc protocol ViewControllerDataSourceDelegate {
+    func waiterCell(for waiter: Waiter) -> UITableViewCell
+}
+
+@objc class ViewControllerDataSource: NSObject, UITableViewDataSource {
+    
+    var waiters: [Waiter] = []
+    let manager: RestaurantManager
+    let delegate: ViewControllerDataSourceDelegate
+    
+    init(restaurantManager: RestaurantManager = RestaurantManager.shared(), delegate: ViewControllerDataSourceDelegate) {
+        
+        manager = restaurantManager
+        self.delegate = delegate
+        
+        let sortByName = NSSortDescriptor(key: "name", ascending: true)
+        waiters = manager.currentRestaurant().staff.sortedArray(using: [sortByName])
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return waiters.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return delegate.waiterCell(for: waiters[indexPath.row])
+    }
+    
+    
+}
