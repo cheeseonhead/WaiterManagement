@@ -96,7 +96,7 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 
 #pragma mark - Routing
 
-- (void)routeToShiftVC:(int)waiterIndex {
+- (void)routeToShiftVC:(NSInteger)waiterIndex {
     UIStoryboard * sb = [UIStoryboard storyboardWithName:@"ShiftViewController" bundle:nil];
     ShiftViewController * shiftVC = (ShiftViewController *)[sb instantiateInitialViewController];
     

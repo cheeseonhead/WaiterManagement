@@ -15,7 +15,7 @@ class ShiftViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBar: UINavigationItem!
     
-    // MARK: State
+    // MARK: States
     var waiter: Waiter!
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ShiftViewController: UIViewController {
             return
         }
         
-        
+        navigationBar.title = waiter.name
     }
     
 }
