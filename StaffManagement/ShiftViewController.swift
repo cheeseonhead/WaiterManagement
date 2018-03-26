@@ -27,7 +27,7 @@ class ShiftViewController: UIViewController {
         }
         
         navigationBar.title = waiter.name
-        dataSource = ShiftViewControllerDataSource(waiter: waiter)
+        dataSource = ShiftViewControllerDataSource(waiter: waiter, manager: RestaurantManager.shared())
     }
     
 }
