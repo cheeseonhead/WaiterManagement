@@ -21,8 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Th-cB-PUj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Waiters" id="ZV2-mV-puF">
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="HmT-gI-KKW"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="idB-MD-rVO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="iE6-w6-mfH"/>
@@ -33,8 +41,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="idB-MD-rVO" secondAttribute="bottom" id="IqJ-wy-Cm0"/>
+                            <constraint firstItem="6Th-cB-PUj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="WDH-rP-1t8"/>
+                            <constraint firstItem="idB-MD-rVO" firstAttribute="top" secondItem="6Th-cB-PUj" secondAttribute="bottom" id="Y6U-Ky-uP9"/>
+                            <constraint firstItem="6Th-cB-PUj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="fhl-ay-MQV"/>
                             <constraint firstItem="idB-MD-rVO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lDE-IH-k6I"/>
-                            <constraint firstItem="idB-MD-rVO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="lu4-we-d56"/>
+                            <constraint firstAttribute="trailing" secondItem="6Th-cB-PUj" secondAttribute="trailing" id="orw-1p-lEw"/>
                             <constraint firstAttribute="trailing" secondItem="idB-MD-rVO" secondAttribute="trailing" id="x5U-kz-haF"/>
                         </constraints>
                     </view>
@@ -44,6 +55,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
