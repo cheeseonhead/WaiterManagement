@@ -18,7 +18,7 @@
 #pragma mark - CREATE
 - (Restaurant *)createRestaurant:(NSString *)name;
 - (Waiter *)createWaiter:(NSString *)name;
-- (Shift *)createShiftStart:(NSDate*)start end:(NSDate*)end;
+- (Shift *)createShift:(NSDate*)start end:(NSDate*)end;
 
 #pragma mark - GET
 - (Restaurant*)currentRestaurant;

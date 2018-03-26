@@ -4,4 +4,5 @@
 
 #include "Waiter.h"
 #include "Restaurant.h"
+#include "Shift.h"
 #include "RestaurantManager.h"
