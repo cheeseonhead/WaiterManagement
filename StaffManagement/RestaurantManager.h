@@ -10,5 +10,13 @@
 #import "Restaurant.h"
 @interface RestaurantManager : NSObject
 + (instancetype)sharedManager;
--(Restaurant*)currentRestaurant;
+
+#pragma mark - CREATE
+- (Restaurant *)createRestaurant:(NSString *)name;
+- (Waiter *)createWaiter:(NSString *)name;
+
+#pragma mark - GET
+- (Restaurant*)currentRestaurant;
+- (NSArray<Restaurant*>*)restaurants;
+
 @end

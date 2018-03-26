@@ -24,28 +24,6 @@
     });
     return sharedManager;
 }
--(Restaurant*)currentRestaurant{
-    if(self.restaurant == nil)
-    {
-        Restaurant *aRestaurant;
-        
-        NSArray<Restaurant*>* restaurants = [self getRestaurants];
-        
-        if(restaurants.count > 0){
-            aRestaurant = restaurants[0];
-        }
-        else{
-            aRestaurant = [self createRestaurant:@""];
-            
-            Waiter *initialWaiter = [self createWaiter:@"John SmitL"];
-            [aRestaurant addStaffObject:initialWaiter];
-            
-            [self save];
-        }
-        self.restaurant = aRestaurant;
-    }
-    return self.restaurant;
-}
 
 #pragma mark - CREATE
 
@@ -67,7 +45,7 @@
 
 #pragma mark - GET
 
-- (NSArray<Restaurant*>*)getRestaurants {
+- (NSArray<Restaurant*>*)restaurants {
     
     NSError *error = nil;
     NSManagedObjectContext * context = [self getContext];
@@ -75,6 +53,29 @@
     NSArray *results = [context executeFetchRequest:request error:&error];
     
     return results;
+}
+
+-(Restaurant*)currentRestaurant{
+    if(self.restaurant == nil)
+    {
+        Restaurant *aRestaurant;
+        
+        NSArray<Restaurant*>* restaurants = [self restaurants];
+        
+        if(restaurants.count > 0){
+            aRestaurant = restaurants[0];
+        }
+        else{
+            aRestaurant = [self createRestaurant:@""];
+            
+            Waiter *initialWaiter = [self createWaiter:@"John SmitL"];
+            [aRestaurant addStaffObject:initialWaiter];
+            
+            [self save];
+        }
+        self.restaurant = aRestaurant;
+    }
+    return self.restaurant;
 }
 
 - (NSManagedObjectContext *)getContext {
