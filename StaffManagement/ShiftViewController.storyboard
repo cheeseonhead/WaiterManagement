@@ -13,7 +13,7 @@
         <!--Title-->
         <scene sceneID="x4H-Qc-g87">
             <objects>
-                <viewController id="mMC-eh-Dxj" sceneMemberID="viewController">
+                <viewController id="mMC-eh-Dxj" customClass="ShiftViewController" customModule="StaffManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HiE-VO-85e"/>
                         <viewControllerLayoutGuide type="bottom" id="Zwa-ub-gU0"/>
@@ -36,7 +36,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zCO-KX-HTH">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="BZg-Df-kiu"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MOt-Lu-wT6"/>
                     </navigationItem>
                 </viewController>
