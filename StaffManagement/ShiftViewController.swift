@@ -17,6 +17,7 @@ class ShiftViewController: UIViewController {
     
     // MARK: States
     var waiter: Waiter!
+    var dataSource: ShiftViewControllerDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,9 @@ class ShiftViewController: UIViewController {
         }
         
         navigationBar.title = waiter.name
+        dataSource = ShiftViewControllerDataSource(waiter: waiter)
     }
     
 }
+
+// MARK: - 
