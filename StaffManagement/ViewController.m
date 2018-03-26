@@ -14,8 +14,15 @@
 static NSString * const kCellIdentifier = @"CellIdentifier";
 
 @interface ViewController ()
+
+#pragma mark Views
 @property IBOutlet UITableView *tableView;
-@property (nonatomic, retain) NSArray *waiters;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+
+#pragma mark States
+@property (nonatomic, strong) NSArray *waiters;
+@property (nonatomic, assign) Boolean isEditing;
+
 @end
 
 @implementation ViewController
@@ -26,12 +33,15 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
     NSSortDescriptor *sortByName = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
     self.waiters = [[[RestaurantManager sharedManager]currentRestaurant].staff sortedArrayUsingDescriptors:@[sortByName]];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.isEditing = false;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark - TableView Data Source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -45,4 +55,31 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
     cell.textLabel.text = waiter.name;
     return cell;
 }
+
+#pragma mark - Actions
+
+- (IBAction)editTapped:(UIBarButtonItem *)sender {
+    self.isEditing = !self.isEditing;
+    [self renderViews];
+}
+
+#pragma mark - Render
+
+- (void)renderViews {
+    [self renderEditButton];
+    [self renderTableView];
+}
+
+- (void)renderEditButton {
+    if(self.isEditing) {
+        [self.editButton setTitle:@"Done"];
+    } else {
+        [self.editButton setTitle: @"Edit"];
+    }
+}
+
+- (void)renderTableView {
+    [self.tableView setEditing:self.isEditing animated:true];
+}
+
 @end
