@@ -44,10 +44,7 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 #pragma mark - TableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIStoryboard * sb = [UIStoryboard storyboardWithName:@"ShiftViewController" bundle:nil];
-    ShiftViewController * shiftVC = (ShiftViewController *)[sb instantiateInitialViewController];
-    
-    [self.navigationController pushViewController:shiftVC animated:YES];
+    [self routeToShiftVC: indexPath.row];
 }
 
 #pragma mark - Data Source Delegate
@@ -95,6 +92,17 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 
 - (void)renderTableView {
     [self.tableView setEditing:self.isEditing animated:YES];
+}
+
+#pragma mark - Routing
+
+- (void)routeToShiftVC:(int)waiterIndex {
+    UIStoryboard * sb = [UIStoryboard storyboardWithName:@"ShiftViewController" bundle:nil];
+    ShiftViewController * shiftVC = (ShiftViewController *)[sb instantiateInitialViewController];
+    
+    shiftVC.waiter = [self.dataSource getWaiterAt:waiterIndex];
+    
+    [self.navigationController pushViewController:shiftVC animated:YES];
 }
 
 @end
