@@ -11,6 +11,7 @@
 		34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F4820698893009EA8A9 /* ShiftViewController.swift */; };
 		34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */; };
 		34584F562069A0C6009EA8A9 /* Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F542069A0C6009EA8A9 /* Shift.m */; };
+		34584F5D2069A4DF009EA8A9 /* Waiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F5B2069A4DF009EA8A9 /* Waiter.m */; };
 		3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */; };
 		3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */; };
 		3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C82069482900C05A59 /* Collection+Sort.swift */; };
@@ -25,7 +26,6 @@
 		651CBBCC1AB4E1CD00F265E8 /* StaffManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBCB1AB4E1CD00F265E8 /* StaffManagementTests.m */; };
 		651CBBD71AB4E31400F265E8 /* RestaurantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBD61AB4E31400F265E8 /* RestaurantManager.m */; };
 		651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBD91AB4E4A000F265E8 /* Restaurant.m */; };
-		651CBBDD1AB4E4A100F265E8 /* Waiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBDC1AB4E4A100F265E8 /* Waiter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,8 @@
 		34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewControllerDataSource.swift; sourceTree = "<group>"; };
 		34584F532069A0C6009EA8A9 /* Shift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shift.h; sourceTree = "<group>"; };
 		34584F542069A0C6009EA8A9 /* Shift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shift.m; sourceTree = "<group>"; };
+		34584F582069A4DF009EA8A9 /* Waiter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Waiter.h; sourceTree = "<group>"; };
+		34584F5B2069A4DF009EA8A9 /* Waiter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Waiter.m; sourceTree = "<group>"; };
 		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 		3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenderer.swift; sourceTree = "<group>"; };
 		3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataSource.swift; sourceTree = "<group>"; };
@@ -67,8 +69,6 @@
 		651CBBD61AB4E31400F265E8 /* RestaurantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantManager.m; sourceTree = "<group>"; };
 		651CBBD81AB4E4A000F265E8 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
 		651CBBD91AB4E4A000F265E8 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
-		651CBBDB1AB4E4A100F265E8 /* Waiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waiter.h; sourceTree = "<group>"; };
-		651CBBDC1AB4E4A100F265E8 /* Waiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waiter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,13 +170,13 @@
 		651CBBDE1AB4E4AC00F265E8 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				651CBBB31AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld */,
-				34584F532069A0C6009EA8A9 /* Shift.h */,
-				34584F542069A0C6009EA8A9 /* Shift.m */,
-				651CBBDB1AB4E4A100F265E8 /* Waiter.h */,
-				651CBBDC1AB4E4A100F265E8 /* Waiter.m */,
 				651CBBD81AB4E4A000F265E8 /* Restaurant.h */,
 				651CBBD91AB4E4A000F265E8 /* Restaurant.m */,
+				34584F532069A0C6009EA8A9 /* Shift.h */,
+				34584F542069A0C6009EA8A9 /* Shift.m */,
+				651CBBB31AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld */,
+				34584F582069A4DF009EA8A9 /* Waiter.h */,
+				34584F5B2069A4DF009EA8A9 /* Waiter.m */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -289,12 +289,12 @@
 				651CBBB21AB4E1CC00F265E8 /* AppDelegate.m in Sources */,
 				651CBBB81AB4E1CD00F265E8 /* ViewController.m in Sources */,
 				3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */,
-				651CBBDD1AB4E4A100F265E8 /* Waiter.m in Sources */,
 				3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */,
 				34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */,
 				3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */,
 				34584F562069A0C6009EA8A9 /* Shift.m in Sources */,
 				34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */,
+				34584F5D2069A4DF009EA8A9 /* Waiter.m in Sources */,
 				651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */,
 				651CBBAF1AB4E1CC00F265E8 /* main.m in Sources */,
 			);

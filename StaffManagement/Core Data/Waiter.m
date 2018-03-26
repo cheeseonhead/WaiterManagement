@@ -1,18 +1,26 @@
 //
-//  Waiter.m
+//  Waiter+CoreDataProperties.m
 //  StaffManagement
 //
-//  Created by Derek Harasen on 2015-03-14.
-//  Copyright (c) 2015 Derek Harasen. All rights reserved.
+//  Created by Jeffrey Wu on 2018-03-26.
+//  Copyright © 2018 Derek Harasen. All rights reserved.
+//
 //
 
 #import "Waiter.h"
-#import "Restaurant.h"
-
 
 @implementation Waiter
 
+@end
+
+@implementation Waiter (CoreDataProperties)
+
++ (NSFetchRequest<Waiter *> *)fetchRequest {
+	return [[NSFetchRequest alloc] initWithEntityName:@"Waiter"];
+}
+
 @dynamic name;
 @dynamic restaurant;
+@dynamic shift;
 
 @end
