@@ -14,7 +14,7 @@
 
 static NSString * const kCellIdentifier = @"CellIdentifier";
 
-@interface ViewController () <ViewControllerDataSourceDelegate>
+@interface ViewController () <ViewControllerDataSourceDelegate, UITableViewDelegate>
 
 #pragma mark Views
 @property IBOutlet UITableView *tableView;
@@ -39,6 +39,12 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
     // Do any additional setup after loading the view, typically from a nib.
     
     self.isEditing = NO;
+}
+
+#pragma mark - TableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Test");
 }
 
 #pragma mark - Data Source Delegate
