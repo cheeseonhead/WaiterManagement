@@ -38,7 +38,7 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
     self.tableView.dataSource = self.dataSource;
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.isEditing = false;
+    self.isEditing = NO;
 }
 
 #pragma mark - Data Source Delegate
@@ -57,6 +57,11 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 }
 
 - (IBAction)addTapped:(id)sender {
+    UIAlertController * alert = [UIAlertController singleInputAlertWithTitle:@"Add Waiter" message:@"" confirmTitle:@"Add" placeHolder:@"Name" handler:^(NSString * _Nonnull name) {
+        [self.dataSource addWaiter: name];
+    }];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - Render
@@ -75,7 +80,7 @@ static NSString * const kCellIdentifier = @"CellIdentifier";
 }
 
 - (void)renderTableView {
-    [self.tableView setEditing:self.isEditing animated:true];
+    [self.tableView setEditing:self.isEditing animated:YES];
 }
 
 @end
