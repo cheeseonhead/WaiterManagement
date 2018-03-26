@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34584F4720698884009EA8A9 /* ShiftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34584F4620698884009EA8A9 /* ShiftViewController.storyboard */; };
+		34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F4820698893009EA8A9 /* ShiftViewController.swift */; };
 		3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */; };
 		3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */; };
 		3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C82069482900C05A59 /* Collection+Sort.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34584F4620698884009EA8A9 /* ShiftViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShiftViewController.storyboard; sourceTree = "<group>"; };
+		34584F4820698893009EA8A9 /* ShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewController.swift; sourceTree = "<group>"; };
 		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 		3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenderer.swift; sourceTree = "<group>"; };
 		3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataSource.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				651CBBB71AB4E1CD00F265E8 /* ViewController.m */,
 				3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */,
 				3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */,
+				34584F4820698893009EA8A9 /* ShiftViewController.swift */,
+				34584F4620698884009EA8A9 /* ShiftViewController.storyboard */,
 				651CBBB91AB4E1CD00F265E8 /* Main.storyboard */,
 				651CBBBE1AB4E1CD00F265E8 /* LaunchScreen.xib */,
 				3499C4CA2069496300C05A59 /* Extensions */,
@@ -250,6 +256,7 @@
 			files = (
 				651CBBBB1AB4E1CD00F265E8 /* Main.storyboard in Resources */,
 				651CBBC01AB4E1CD00F265E8 /* LaunchScreen.xib in Resources */,
+				34584F4720698884009EA8A9 /* ShiftViewController.storyboard in Resources */,
 				651CBBBD1AB4E1CD00F265E8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 				651CBBDD1AB4E4A100F265E8 /* Waiter.m in Sources */,
 				3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */,
 				3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */,
+				34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */,
 				651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */,
 				651CBBAF1AB4E1CC00F265E8 /* main.m in Sources */,
 			);
