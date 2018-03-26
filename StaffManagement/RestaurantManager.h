@@ -19,4 +19,7 @@
 - (Restaurant*)currentRestaurant;
 - (NSArray<Restaurant*>*)restaurants;
 
+#pragma mark - POST
+- (void)save;
+
 @end

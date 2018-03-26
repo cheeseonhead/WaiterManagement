@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 @objc protocol ViewControllerDataSourceDelegate {
+    var tableView: UITableView { get }
     func waiterCell(for waiter: Waiter) -> UITableViewCell
 }
 
@@ -24,6 +25,25 @@ import UIKit
         manager = restaurantManager
         self.delegate = delegate
         
+        super.init()
+        
+        updateWaiters()
+    }
+}
+
+// MARK: - Data Manipulation
+extension ViewControllerDataSource {
+    
+    func addWaiter(_ name: String) {
+        let newWaiter = manager.createWaiter(name)
+        let curRestaurant = manager.currentRestaurant()
+        curRestaurant?.addStaffObject(newWaiter)
+        manager.save()
+        updateWaiters()
+        delegate.tableView.reloadData()
+    }
+    
+    func updateWaiters() {
         let sortByName = NSSortDescriptor(key: "name", ascending: true)
         waiters = manager.currentRestaurant().staff.sortedArray(using: [sortByName])
     }
