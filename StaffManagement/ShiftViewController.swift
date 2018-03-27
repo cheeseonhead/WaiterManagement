@@ -51,6 +51,16 @@ extension ShiftViewController: ShiftVCDataSourceDelegate {
     }
 }
 
+// MARK: - Picker Delegate
+extension ShiftViewController: ShiftTimePickerViewControllerDelegate {
+    func choose(startTime: Date, duration: TimeInterval) {
+        let endTime = startTime.addingTimeInterval(duration)
+        dataSource.addShift(start: startTime, end: endTime) { _ in
+            tableView.reloadData()
+        }
+    }
+}
+
 // MARK: - Helper
 extension ShiftViewController {
     func format(shift: Shift) -> String {

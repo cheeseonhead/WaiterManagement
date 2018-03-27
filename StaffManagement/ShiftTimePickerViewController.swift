@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ShiftTimePickerViewControllerDelegate: class {
-    func choose(startTime: Date, Duration: TimeInterval)
+    func choose(startTime: Date, duration: TimeInterval)
 }
 
 class ShiftTimePickerViewController: UIViewController {
@@ -25,7 +25,7 @@ class ShiftTimePickerViewController: UIViewController {
         let duration = durationPicker.countDownDuration
         
         dismiss(animated: true) {
-            self.delegate?.choose(startTime: startDate, Duration: duration)
+            self.delegate?.choose(startTime: startDate, duration: duration)
         }
     }
     
