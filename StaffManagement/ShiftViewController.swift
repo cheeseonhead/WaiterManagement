@@ -47,7 +47,10 @@ class ShiftViewController: UIViewController {
 }
 
 // MARK: - Data Source Delegate
-extension ShiftViewController: ShiftVCDataSourceDelegate {
+extension ShiftViewController: RestaurantDataSourceDelegate {
+    
+    typealias DisplayType = Shift
+    
     func cell(for shift: Shift) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kShiftCellIdentifier)!
         cell.textLabel?.text = format(shift: shift)
