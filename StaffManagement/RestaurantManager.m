@@ -11,6 +11,11 @@
 #import "Waiter.h"
 #import "Shift.h"
 #import "Restaurant.h"
+
+NSString * const kRestaurantEntity = @"Restaurant";
+NSString * const kWaiterEntity = @"Waiter";
+NSString * const kShiftEntity = @"Shift";
+
 @interface RestaurantManager()
 @property (nonatomic, retain) Restaurant *restaurant;
 
@@ -29,7 +34,7 @@
 #pragma mark - CREATE
 
 - (Restaurant *)createRestaurant:(NSString *)name {
-    NSEntityDescription *restaurantEntity = [NSEntityDescription entityForName:@"Restaurant" inManagedObjectContext:[self getContext]];
+    NSEntityDescription *restaurantEntity = [NSEntityDescription entityForName:kRestaurantEntity inManagedObjectContext:[self getContext]];
     Restaurant * restaurant = [[Restaurant alloc] initWithEntity:restaurantEntity insertIntoManagedObjectContext:[self getContext]];
     restaurant.name = name;
     
@@ -37,7 +42,7 @@
 }
 
 - (Waiter *)createWaiter:(NSString *)name {
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Waiter" inManagedObjectContext:[self getContext]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kWaiterEntity inManagedObjectContext:[self getContext]];
     Waiter * waiter = [[Waiter alloc] initWithEntity:entity insertIntoManagedObjectContext:[self getContext]];
     waiter.name = name;
     
@@ -45,7 +50,7 @@
 }
 
 - (Shift *)createShift:(NSDate*)start duration:(NSTimeInterval)duration {
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Shift" inManagedObjectContext:[self getContext]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kShiftEntity inManagedObjectContext:[self getContext]];
     Shift *shift = [[Shift alloc] initWithEntity:entity insertIntoManagedObjectContext:[self getContext]];
     
     shift.start = start;
@@ -57,7 +62,7 @@
 #pragma mark - GET
 
 - (NSArray<Restaurant*>*)restaurants {
-    return [self entities:@"Restaurant" named:nil];
+    return [self entities:kRestaurantEntity named:nil];
 }
 
 -(Restaurant*)currentRestaurant{
@@ -84,7 +89,7 @@
 }
 
 - (NSArray<Waiter*>*)waitersNamed:(NSString  * _Nullable )name {
-    return [self entities:@"Waiter" named:name];
+    return [self entities:kWaiterEntity named:name];
 }
 
 - (NSArray*)entities:(NSString *)entity named:(NSString *)nameOfNil {

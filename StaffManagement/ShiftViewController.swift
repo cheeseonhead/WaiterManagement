@@ -12,7 +12,7 @@ import UIKit
 class ShiftViewController: UIViewController {
     
     // MARK: - Constants
-    let CELL_REUSE_IDENTIFIER = "shiftCell"
+    let kShiftCellIdentifier = "shiftCell"
     
     // MARK: - Views
     @IBOutlet weak var tableView: UITableView!
@@ -33,7 +33,7 @@ class ShiftViewController: UIViewController {
         tableView.dataSource = dataSource
         
         navigationBar.title = waiter.name
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_REUSE_IDENTIFIER)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: kShiftCellIdentifier)
     }
     
     @IBAction func addTapped(_ sender: Any) {
@@ -49,7 +49,7 @@ class ShiftViewController: UIViewController {
 // MARK: - Data Source Delegate
 extension ShiftViewController: ShiftVCDataSourceDelegate {
     func cell(for shift: Shift) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_REUSE_IDENTIFIER)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: kShiftCellIdentifier)!
         cell.textLabel?.text = format(shift: shift)
         
         return cell
