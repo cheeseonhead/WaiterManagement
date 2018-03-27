@@ -9,31 +9,75 @@
 import Foundation
 import UIKit
 
-class ShiftViewControllerDataSource: NSObject, UITableViewDataSource {
+protocol ShiftVCDataSourceDelegate: class {
+    func cell(for shift: Shift) -> UITableViewCell
+}
+
+class ShiftViewControllerDataSource: NSObject {
     
     let waiter: Waiter
     let manager: RestaurantManager
-//    var shifts: 
+    weak var delegate: ShiftVCDataSourceDelegate?
+    var shifts: [Shift] = []
     
-    init(waiter: Waiter, manager: RestaurantManager) {
+    init(waiter: Waiter, manager: RestaurantManager, delegate: ShiftVCDataSourceDelegate) {
         self.waiter = waiter
         self.manager = manager
+        self.delegate = delegate
         super.init()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        updateShifts()
     }
 }
 
 // MARK: - Data Manipulation
 extension ShiftViewControllerDataSource {
-    func addShift(start: Date, end: Date) {
-        let shift = manager.createShift(start, end: end)
+    func addShift(start: Date, end: Date, callback: (Shift) -> Void) {
+        let shift = manager.createShift(start, end: end)!
+        waiter.addShiftObject(shift)
+        manager.save()
+        updateShifts()
+        callback(shift)
+    }
+    
+    func deleteShift(at index: Int, callback: (Shift) -> Void) {
+        let shift = shifts[index]
+        manager.delete(shift)
+        manager.save()
+        updateShifts()
+        callback(shift)
+    }
+    
+    func updateShifts() {
+        shifts = waiter.shift!.sorted(by: { (left, right) -> Bool in
+            return left.start! == right.start! ? left.start! < right.start! : left.end! < right.end!
+        })
+    }
+}
+
+// MARK: - TableView Datasource
+extension ShiftViewControllerDataSource: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shifts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let delegate = delegate else { return UITableViewCell() }
         
+        return delegate.cell(for: shifts[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            deleteShift(at: indexPath.row) { _ in
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .left)
+                tableView.endUpdates()
+            }
+        default:
+            break
+        }
     }
 }

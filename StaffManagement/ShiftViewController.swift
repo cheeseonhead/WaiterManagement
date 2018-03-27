@@ -11,6 +11,9 @@ import UIKit
 
 class ShiftViewController: UIViewController {
     
+    // MARK: - Constants
+    let CELL_REUSE_IDENTIFIER = "shiftCell"
+    
     // MARK: - Views
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -26,10 +29,33 @@ class ShiftViewController: UIViewController {
             return
         }
         
+        dataSource = ShiftViewControllerDataSource(waiter: waiter, manager: RestaurantManager.shared(), delegate: self)
+        
         navigationBar.title = waiter.name
-        dataSource = ShiftViewControllerDataSource(waiter: waiter, manager: RestaurantManager.shared())
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_REUSE_IDENTIFIER)
     }
-    
 }
 
-// MARK: - 
+// MARK: - Data Source Delegate
+extension ShiftViewController: ShiftVCDataSourceDelegate {
+    func cell(for shift: Shift) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_REUSE_IDENTIFIER)!
+        cell.textLabel?.text = format(shift: shift)
+        
+        return cell
+    }
+}
+
+// MARK: - Helper
+extension ShiftViewController {
+    func format(shift: Shift) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        
+        var resp = formatter.string(from: shift.start!)
+        resp += formatter.string(from: shift.end!)
+        
+        return resp
+    }
+}
