@@ -21,6 +21,15 @@ class ShiftTimePickerViewController: UIViewController {
     @IBOutlet weak var durationPicker: UIDatePicker!
     
     @IBAction func submitTapped(_ sender: Any) {
+        let startDate = startTimePicker.date
+        let duration = durationPicker.countDownDuration
         
+        dismiss(animated: true) {
+            self.delegate?.choose(startTime: startDate, Duration: duration)
+        }
+    }
+    
+    @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
