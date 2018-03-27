@@ -25,11 +25,3 @@ class ShiftScheduler {
     
 }
 
-extension Date {
-    func isBetween(_ date1: Date, and date2: Date) -> Bool {
-        let left = date1 < date2 ? date1 : date2
-        let right = date1 < date2 ? date2 : date1
-        
-        return self > left && self < right
-    }
-}

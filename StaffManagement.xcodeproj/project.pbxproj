@@ -17,6 +17,7 @@
 		34584F6F2069E7D9009EA8A9 /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */; };
 		34584F71206AF323009EA8A9 /* Shift+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F70206AF323009EA8A9 /* Shift+Comparable.swift */; };
 		34584F73206AF41A009EA8A9 /* ShiftScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */; };
+		34584F75206AF9BF009EA8A9 /* Date+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F74206AF9BF009EA8A9 /* Date+Compare.swift */; };
 		3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */; };
 		3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C82069482900C05A59 /* Collection+Sort.swift */; };
 		3499C4CC2069579C00C05A59 /* UIAlertController+QuickMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */; };
@@ -55,6 +56,7 @@
 		34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
 		34584F70206AF323009EA8A9 /* Shift+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shift+Comparable.swift"; sourceTree = "<group>"; };
 		34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftScheduler.swift; sourceTree = "<group>"; };
+		34584F74206AF9BF009EA8A9 /* Date+Compare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Compare.swift"; sourceTree = "<group>"; };
 		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 		3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataSource.swift; sourceTree = "<group>"; };
 		3499C4C82069482900C05A59 /* Collection+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sort.swift"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				3499C4C82069482900C05A59 /* Collection+Sort.swift */,
 				3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */,
 				34584F70206AF323009EA8A9 /* Shift+Comparable.swift */,
+				34584F74206AF9BF009EA8A9 /* Date+Compare.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				3499C4CC2069579C00C05A59 /* UIAlertController+QuickMake.swift in Sources */,
 				651CBBB51AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld in Sources */,
 				651CBBB21AB4E1CC00F265E8 /* AppDelegate.m in Sources */,
+				34584F75206AF9BF009EA8A9 /* Date+Compare.swift in Sources */,
 				651CBBB81AB4E1CD00F265E8 /* ViewController.m in Sources */,
 				3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */,
 				3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */,
