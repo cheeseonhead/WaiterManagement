@@ -48,7 +48,7 @@
                                     <!--2018-03-27 00:58:17 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1800" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="qTk-Qr-HkK" userLabel="Duration">
+                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1800" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTk-Qr-HkK" userLabel="Duration">
                                 <rect key="frame" x="0.0" y="321.5" width="320" height="128.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="a0P-sn-k2a"/>
