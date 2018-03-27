@@ -74,6 +74,7 @@ extension ShiftViewController {
         formatter.timeStyle = .short
         
         var resp = formatter.string(from: shift.start!)
+        formatter.dateStyle = .none
         resp += " to " + formatter.string(from: shift.end!)
         
         return resp
