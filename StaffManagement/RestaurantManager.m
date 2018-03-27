@@ -113,8 +113,8 @@
 
 #pragma mark - DELETE
 
-- (void)deleteWaiter:(Waiter *)waiter {
-    [[self getContext] deleteObject:waiter];
+- (void)delete:(NSManagedObject *)object {
+    [[self getContext] deleteObject:object];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @class Restaurant;
 @class Waiter;
@@ -29,6 +30,6 @@
 - (void)save;
 
 #pragma mark - DELETE
-- (void)deleteWaiter:(Waiter *)waiter;
+- (void)delete:(NSManagedObject *)object;
 
 @end
