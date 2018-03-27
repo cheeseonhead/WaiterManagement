@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum Result<T> {
+    case success(T)
+    case failure(String)
+}
+
 class ShiftViewControllerDataSource: NSObject, RestaurantDataSource {
     
     typealias MainType = Waiter
@@ -34,12 +39,20 @@ class ShiftViewControllerDataSource: NSObject, RestaurantDataSource {
 // MARK: - Data Manipulation
 extension ShiftViewControllerDataSource {
     
-    func addShift(start: Date, duration: TimeInterval, callback: (Shift) -> Void) {
+    func addShift(start: Date, duration: TimeInterval, callback: (Result<Shift>) -> Void) {
+        
         let shift = manager.createShift(start, duration: duration)!
+        
+        guard !ShiftScheduler.hasConflict(shifts: data, newShift: shift) else {
+            manager.delete(shift)
+            callback(.failure("There was a conflict when scheduling."))
+            return
+        }
+        
         waiter.addShiftObject(shift)
         manager.save()
         updateData()
-        callback(shift)
+        callback(.success(shift))
     }
     
     func updateData() {

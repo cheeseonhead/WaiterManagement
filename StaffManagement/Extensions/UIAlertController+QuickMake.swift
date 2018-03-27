@@ -29,4 +29,14 @@ extension UIAlertController {
         
         return ac
     }
+    
+    public class func singleActionAlert(title: String, message: String, confirmTitle: String) -> UIAlertController {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let confirm = UIAlertAction(title: title, style: .cancel, handler: nil)
+        
+        ac.addAction(confirm)
+        
+        return ac
+    }
 }

@@ -62,8 +62,15 @@ extension ShiftViewController: RestaurantDataSourceDelegate {
 // MARK: - Picker Delegate
 extension ShiftViewController: ShiftTimePickerViewControllerDelegate {
     func choose(startTime: Date, duration: TimeInterval) {
-        dataSource.addShift(start: startTime, duration: duration) { _ in
-            tableView.reloadData()
+        dataSource.addShift(start: startTime, duration: duration) { result in
+            
+            switch(result) {
+            case .success:
+                tableView.reloadData()
+            case .failure(let prompt):
+                let ac = UIAlertController.singleActionAlert(title: "Failure", message: prompt, confirmTitle: "Ok")
+                present(ac, animated: true, completion: nil)
+            }
         }
     }
 }

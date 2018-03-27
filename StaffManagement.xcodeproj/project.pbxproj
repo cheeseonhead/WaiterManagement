@@ -16,6 +16,7 @@
 		34584F6C2069D95D009EA8A9 /* Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F6A2069D95D009EA8A9 /* Shift.m */; };
 		34584F6F2069E7D9009EA8A9 /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */; };
 		34584F71206AF323009EA8A9 /* Shift+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F70206AF323009EA8A9 /* Shift+Comparable.swift */; };
+		34584F73206AF41A009EA8A9 /* ShiftScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */; };
 		3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */; };
 		3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C82069482900C05A59 /* Collection+Sort.swift */; };
 		3499C4CC2069579C00C05A59 /* UIAlertController+QuickMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */; };
@@ -53,6 +54,7 @@
 		34584F6A2069D95D009EA8A9 /* Shift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shift.m; sourceTree = "<group>"; };
 		34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
 		34584F70206AF323009EA8A9 /* Shift+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shift+Comparable.swift"; sourceTree = "<group>"; };
+		34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftScheduler.swift; sourceTree = "<group>"; };
 		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 		3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataSource.swift; sourceTree = "<group>"; };
 		3499C4C82069482900C05A59 /* Collection+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sort.swift"; sourceTree = "<group>"; };
@@ -134,7 +136,6 @@
 		651CBBAB1AB4E1CC00F265E8 /* StaffManagement */ = {
 			isa = PBXGroup;
 			children = (
-				34584F6D2069E7C2009EA8A9 /* Protocols */,
 				651CBBB01AB4E1CC00F265E8 /* AppDelegate.h */,
 				651CBBB11AB4E1CC00F265E8 /* AppDelegate.m */,
 				651CBBD51AB4E31400F265E8 /* RestaurantManager.h */,
@@ -145,10 +146,12 @@
 				34584F4820698893009EA8A9 /* ShiftViewController.swift */,
 				34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */,
 				34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */,
+				34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */,
 				34584F4620698884009EA8A9 /* ShiftViewController.storyboard */,
 				34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */,
 				651CBBB91AB4E1CD00F265E8 /* Main.storyboard */,
 				651CBBBE1AB4E1CD00F265E8 /* LaunchScreen.xib */,
+				34584F6D2069E7C2009EA8A9 /* Protocols */,
 				3499C4CA2069496300C05A59 /* Extensions */,
 				651CBBDE1AB4E4AC00F265E8 /* Core Data */,
 				651CBBBC1AB4E1CD00F265E8 /* Images.xcassets */,
@@ -312,6 +315,7 @@
 				34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */,
 				34584F6F2069E7D9009EA8A9 /* RestaurantDataSource.swift in Sources */,
 				34584F642069CE83009EA8A9 /* ShiftTimePickerViewController.swift in Sources */,
+				34584F73206AF41A009EA8A9 /* ShiftScheduler.swift in Sources */,
 				34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */,
 				34584F5D2069A4DF009EA8A9 /* Waiter.m in Sources */,
 				651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */,
