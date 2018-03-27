@@ -89,7 +89,7 @@
 
 - (NSArray*)entities:(NSString *)entity named:(NSString *)nameOfNil {
     NSError * error = nil;
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Waiter"];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:entity];
     if (nameOfNil != nil) {
         request.predicate = [NSPredicate predicateWithFormat:@"name = %@", nameOfNil];
     }
