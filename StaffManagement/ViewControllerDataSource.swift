@@ -14,7 +14,7 @@ import UIKit
     func waiterCell(for waiter: Waiter) -> UITableViewCell
 }
 
-@objc class ViewControllerDataSource: NSObject {
+class ViewControllerDataSource: NSObject {
     
     var waiters: [Waiter] = []
     let manager: RestaurantManager
