@@ -96,7 +96,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cancelTapped" destination="CCy-aj-p9T" id="9H8-xS-JyK"/>
                         <outlet property="durationPicker" destination="qTk-Qr-HkK" id="aCI-EU-94l"/>
                         <outlet property="startTimePicker" destination="KxX-2z-qv7" id="QZ2-Ub-d2U"/>
                     </connections>

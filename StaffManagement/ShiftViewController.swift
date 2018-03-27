@@ -37,7 +37,12 @@ class ShiftViewController: UIViewController {
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        let pickerVC = UIStoryboard.init(name: "ShiftTimePickerViewController", bundle: nil).instantiateInitialViewController() as! ShiftTimePickerViewController
+        pickerVC.delegate = self
         
+        pickerVC.modalPresentationStyle = .formSheet
+        
+        present(pickerVC, animated: true, completion: nil)
     }
 }
 
