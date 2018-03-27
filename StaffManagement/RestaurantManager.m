@@ -44,12 +44,12 @@
     return waiter;
 }
 
-- (Shift *)createShift:(NSDate*)start end:(NSDate*)end {
+- (Shift *)createShift:(NSDate*)start duration:(NSTimeInterval)duration {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Shift" inManagedObjectContext:[self getContext]];
     Shift *shift = [[Shift alloc] initWithEntity:entity insertIntoManagedObjectContext:[self getContext]];
     
     shift.start = start;
-    shift.end = end;
+    shift.duration = [NSNumber numberWithDouble:duration];
     
     return shift;
 }

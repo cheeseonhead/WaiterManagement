@@ -32,8 +32,8 @@ class ShiftViewControllerDataSource: NSObject {
 
 // MARK: - Data Manipulation
 extension ShiftViewControllerDataSource {
-    func addShift(start: Date, end: Date, callback: (Shift) -> Void) {
-        let shift = manager.createShift(start, end: end)!
+    func addShift(start: Date, duration: TimeInterval, callback: (Shift) -> Void) {
+        let shift = manager.createShift(start, duration: duration)!
         waiter.addShiftObject(shift)
         manager.save()
         updateShifts()
@@ -50,7 +50,7 @@ extension ShiftViewControllerDataSource {
     
     func updateShifts() {
         shifts = waiter.shift!.sorted(by: { (left, right) -> Bool in
-            return left.start! == right.start! ? left.start! < right.start! : left.end! < right.end!
+            return left.start! == right.start! ? left.start! < right.start! : left.duration!.doubleValue < right.duration!.doubleValue
         })
     }
 }

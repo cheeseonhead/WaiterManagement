@@ -59,8 +59,7 @@ extension ShiftViewController: ShiftVCDataSourceDelegate {
 // MARK: - Picker Delegate
 extension ShiftViewController: ShiftTimePickerViewControllerDelegate {
     func choose(startTime: Date, duration: TimeInterval) {
-        let endTime = startTime.addingTimeInterval(duration)
-        dataSource.addShift(start: startTime, end: endTime) { _ in
+        dataSource.addShift(start: startTime, duration: duration) { _ in
             tableView.reloadData()
         }
     }
@@ -73,9 +72,15 @@ extension ShiftViewController {
         formatter.dateStyle = .short
         formatter.timeStyle = .short
         
-        var resp = formatter.string(from: shift.start!)
+        var resp = "\(formatter.string(from: shift.start!)) to "
         formatter.dateStyle = .none
-        resp += " to " + formatter.string(from: shift.end!)
+        resp += "\(formatter.string(from: shift.end()))"
+        
+        let durationFormatter = DateComponentsFormatter()
+        durationFormatter.unitsStyle = .abbreviated
+        durationFormatter.allowedUnits = [.minute, .hour]
+
+        resp += " (\(durationFormatter.string(from: Double(shift.duration!)) ?? ""))"
         
         return resp
     }
