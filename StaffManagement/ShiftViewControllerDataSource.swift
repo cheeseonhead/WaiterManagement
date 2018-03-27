@@ -43,16 +43,7 @@ extension ShiftViewControllerDataSource {
     }
     
     func updateData() {
-        data = waiter.shift!.sorted(by: { (left, right) -> Bool in
-            switch(left.start!.compare(right.start!)) {
-            case .orderedAscending:
-                return true
-            case .orderedDescending:
-                return false
-            case.orderedSame:
-                return left.duration!.doubleValue < right.duration!.doubleValue
-            }
-        })
+        data = waiter.shift!.sorted(by: <)
     }
 }
 

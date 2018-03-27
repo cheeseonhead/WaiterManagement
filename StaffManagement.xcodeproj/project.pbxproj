@@ -15,7 +15,7 @@
 		34584F662069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */; };
 		34584F6C2069D95D009EA8A9 /* Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F6A2069D95D009EA8A9 /* Shift.m */; };
 		34584F6F2069E7D9009EA8A9 /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */; };
-		3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */; };
+		34584F71206AF323009EA8A9 /* Shift+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F70206AF323009EA8A9 /* Shift+Comparable.swift */; };
 		3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */; };
 		3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C82069482900C05A59 /* Collection+Sort.swift */; };
 		3499C4CC2069579C00C05A59 /* UIAlertController+QuickMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */; };
@@ -52,8 +52,8 @@
 		34584F672069D95D009EA8A9 /* Shift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shift.h; sourceTree = "<group>"; };
 		34584F6A2069D95D009EA8A9 /* Shift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shift.m; sourceTree = "<group>"; };
 		34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
+		34584F70206AF323009EA8A9 /* Shift+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shift+Comparable.swift"; sourceTree = "<group>"; };
 		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
-		3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenderer.swift; sourceTree = "<group>"; };
 		3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataSource.swift; sourceTree = "<group>"; };
 		3499C4C82069482900C05A59 /* Collection+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sort.swift"; sourceTree = "<group>"; };
 		3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIAlertController+QuickMake.swift"; path = "StaffManagement/Extensions/UIAlertController+QuickMake.swift"; sourceTree = SOURCE_ROOT; };
@@ -108,6 +108,7 @@
 			children = (
 				3499C4C82069482900C05A59 /* Collection+Sort.swift */,
 				3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */,
+				34584F70206AF323009EA8A9 /* Shift+Comparable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,7 +142,6 @@
 				651CBBB61AB4E1CD00F265E8 /* ViewController.h */,
 				651CBBB71AB4E1CD00F265E8 /* ViewController.m */,
 				3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */,
-				3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */,
 				34584F4820698893009EA8A9 /* ShiftViewController.swift */,
 				34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */,
 				34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */,
@@ -301,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34584F71206AF323009EA8A9 /* Shift+Comparable.swift in Sources */,
 				651CBBD71AB4E31400F265E8 /* RestaurantManager.m in Sources */,
 				3499C4CC2069579C00C05A59 /* UIAlertController+QuickMake.swift in Sources */,
 				651CBBB51AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld in Sources */,
@@ -309,7 +310,6 @@
 				3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */,
 				3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */,
 				34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */,
-				3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */,
 				34584F6F2069E7D9009EA8A9 /* RestaurantDataSource.swift in Sources */,
 				34584F642069CE83009EA8A9 /* ShiftTimePickerViewController.swift in Sources */,
 				34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */,
