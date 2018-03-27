@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+protocol ShiftTimePickerViewControllerDelegate: class {
+    func choose(startTime: Date, Duration: TimeInterval)
+}
+
+class ShiftTimePickerViewController: UIViewController {
+    
+    weak var delegate: ShiftTimePickerViewControllerDelegate?
+    
+    @IBOutlet weak var startTimePicker: UIDatePicker!
+    @IBOutlet weak var durationPicker: UIDatePicker!
+    
+    @IBAction func submitTapped(_ sender: Any) {
+        
+    }
+}
