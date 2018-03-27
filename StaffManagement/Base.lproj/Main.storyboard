@@ -39,7 +39,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Waiters" id="ZV2-mV-puF">
-                        <barButtonItem key="leftBarButtonItem" title="Add" id="hPr-K1-7kv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="hPr-K1-7kv">
                             <connections>
                                 <action selector="addTapped:" destination="vXZ-lx-hvc" id="Vl5-70-1jw"/>
                             </connections>
