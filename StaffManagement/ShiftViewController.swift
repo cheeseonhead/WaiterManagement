@@ -35,6 +35,10 @@ class ShiftViewController: UIViewController {
         navigationBar.title = waiter.name
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_REUSE_IDENTIFIER)
     }
+    
+    @IBAction func addTapped(_ sender: Any) {
+        
+    }
 }
 
 // MARK: - Data Source Delegate

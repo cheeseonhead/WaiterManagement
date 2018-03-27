@@ -36,7 +36,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zCO-KX-HTH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MOt-Lu-wT6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MOt-Lu-wT6">
+                            <connections>
+                                <action selector="addTapped:" destination="mMC-eh-Dxj" id="SEN-v8-PtS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="navigationBar" destination="zCO-KX-HTH" id="Pm4-OT-Fta"/>

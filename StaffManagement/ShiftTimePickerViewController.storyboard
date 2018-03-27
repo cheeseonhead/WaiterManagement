@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d3g-Wf-pn9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shift View Controller-->
+        <scene sceneID="8bZ-11-P38">
+            <objects>
+                <viewController id="d3g-Wf-pn9" customClass="ShiftViewController" customModule="StaffManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KaF-9h-p6k"/>
+                        <viewControllerLayoutGuide type="bottom" id="J0E-ZA-fS4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZOv-EP-sSo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="KxX-2z-qv7" userLabel="StartTime">
+                                <rect key="frame" x="28" y="97.5" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="543805097.18484998">
+                                    <!--2018-03-27 00:58:17 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1800" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="qTk-Qr-HkK" userLabel="Duration">
+                                <rect key="frame" x="28" y="382.5" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="543805105.23834395">
+                                    <!--2018-03-27 00:58:25 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-yU-rk6">
+                                <rect key="frame" x="148" y="68.5" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTx-0g-zFt">
+                                <rect key="frame" x="154" y="353.5" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gox-bf-hWx" userLabel="TopSpacer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="68.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRH-Bt-Qmf" userLabel="BotSpacer">
+                                <rect key="frame" x="16" y="598.5" width="343" height="68.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gox-bf-hWx" secondAttribute="trailing" id="2LV-Pq-aLG"/>
+                            <constraint firstItem="tRH-Bt-Qmf" firstAttribute="leading" secondItem="ZOv-EP-sSo" secondAttribute="leadingMargin" id="4ef-xi-Nxj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tRH-Bt-Qmf" secondAttribute="trailing" id="4tD-t0-6Ti"/>
+                            <constraint firstItem="KxX-2z-qv7" firstAttribute="top" secondItem="SRl-yU-rk6" secondAttribute="bottom" constant="8" id="ESU-Ya-sdR"/>
+                            <constraint firstItem="J0E-ZA-fS4" firstAttribute="top" secondItem="tRH-Bt-Qmf" secondAttribute="bottom" id="KYI-YO-tf8"/>
+                            <constraint firstItem="UTx-0g-zFt" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="ON6-ZS-bq7"/>
+                            <constraint firstItem="tRH-Bt-Qmf" firstAttribute="height" secondItem="gox-bf-hWx" secondAttribute="height" id="QLJ-aj-f1J"/>
+                            <constraint firstItem="qTk-Qr-HkK" firstAttribute="bottom" secondItem="tRH-Bt-Qmf" secondAttribute="top" id="T0M-sd-esJ"/>
+                            <constraint firstItem="KxX-2z-qv7" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="Wzz-P6-6Qy"/>
+                            <constraint firstItem="gox-bf-hWx" firstAttribute="leading" secondItem="ZOv-EP-sSo" secondAttribute="leading" id="XSh-fc-MPg"/>
+                            <constraint firstItem="gox-bf-hWx" firstAttribute="top" secondItem="ZOv-EP-sSo" secondAttribute="top" id="YUk-Sp-FIp"/>
+                            <constraint firstItem="qTk-Qr-HkK" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="dRX-Yq-U9Z"/>
+                            <constraint firstItem="SRl-yU-rk6" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="gXM-Em-tHr"/>
+                            <constraint firstItem="UTx-0g-zFt" firstAttribute="top" secondItem="KxX-2z-qv7" secondAttribute="bottom" constant="40" id="i80-oI-RoJ"/>
+                            <constraint firstItem="SRl-yU-rk6" firstAttribute="top" secondItem="gox-bf-hWx" secondAttribute="bottom" id="jFP-al-5IX"/>
+                            <constraint firstItem="qTk-Qr-HkK" firstAttribute="top" secondItem="UTx-0g-zFt" secondAttribute="bottom" constant="8" id="nEO-qn-cls"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eY-PM-vfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89" y="176"/>
+        </scene>
+    </scenes>
+</document>

@@ -12,6 +12,8 @@
 		34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */; };
 		34584F562069A0C6009EA8A9 /* Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F542069A0C6009EA8A9 /* Shift.m */; };
 		34584F5D2069A4DF009EA8A9 /* Waiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F5B2069A4DF009EA8A9 /* Waiter.m */; };
+		34584F642069CE83009EA8A9 /* ShiftTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */; };
+		34584F662069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */; };
 		3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */; };
 		3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */; };
 		3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C82069482900C05A59 /* Collection+Sort.swift */; };
@@ -46,6 +48,8 @@
 		34584F542069A0C6009EA8A9 /* Shift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shift.m; sourceTree = "<group>"; };
 		34584F582069A4DF009EA8A9 /* Waiter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Waiter.h; sourceTree = "<group>"; };
 		34584F5B2069A4DF009EA8A9 /* Waiter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Waiter.m; sourceTree = "<group>"; };
+		34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTimePickerViewController.swift; sourceTree = "<group>"; };
+		34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShiftTimePickerViewController.storyboard; sourceTree = "<group>"; };
 		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 		3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRenderer.swift; sourceTree = "<group>"; };
 		3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataSource.swift; sourceTree = "<group>"; };
@@ -129,7 +133,9 @@
 				3499C4C4206942E900C05A59 /* ViewControllerRenderer.swift */,
 				34584F4820698893009EA8A9 /* ShiftViewController.swift */,
 				34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */,
+				34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */,
 				34584F4620698884009EA8A9 /* ShiftViewController.storyboard */,
+				34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */,
 				651CBBB91AB4E1CD00F265E8 /* Main.storyboard */,
 				651CBBBE1AB4E1CD00F265E8 /* LaunchScreen.xib */,
 				3499C4CA2069496300C05A59 /* Extensions */,
@@ -262,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34584F662069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard in Resources */,
 				651CBBBB1AB4E1CD00F265E8 /* Main.storyboard in Resources */,
 				651CBBC01AB4E1CD00F265E8 /* LaunchScreen.xib in Resources */,
 				34584F4720698884009EA8A9 /* ShiftViewController.storyboard in Resources */,
@@ -293,6 +300,7 @@
 				34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */,
 				3499C4C5206942E900C05A59 /* ViewControllerRenderer.swift in Sources */,
 				34584F562069A0C6009EA8A9 /* Shift.m in Sources */,
+				34584F642069CE83009EA8A9 /* ShiftTimePickerViewController.swift in Sources */,
 				34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */,
 				34584F5D2069A4DF009EA8A9 /* Waiter.m in Sources */,
 				651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */,
