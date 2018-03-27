@@ -30,6 +30,7 @@ class ShiftViewController: UIViewController {
         }
         
         dataSource = ShiftViewControllerDataSource(waiter: waiter, manager: RestaurantManager.shared(), delegate: self)
+        tableView.dataSource = dataSource
         
         navigationBar.title = waiter.name
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_REUSE_IDENTIFIER)
@@ -54,7 +55,7 @@ extension ShiftViewController {
         formatter.timeStyle = .short
         
         var resp = formatter.string(from: shift.start!)
-        resp += formatter.string(from: shift.end!)
+        resp += " to " + formatter.string(from: shift.end!)
         
         return resp
     }
