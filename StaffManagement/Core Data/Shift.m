@@ -29,7 +29,7 @@
 	
 	
 	
-	
+	// Another awesome comment
 	
 	return [[NSFetchRequest alloc] initWithEntityName:@"Shift"];
 }
