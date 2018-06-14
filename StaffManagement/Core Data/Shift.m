@@ -22,6 +22,11 @@
 @implementation Shift (CoreDataProperties)
 
 + (NSFetchRequest<Shift *> *)fetchRequest {
+	
+	
+	
+	
+	
 	return [[NSFetchRequest alloc] initWithEntityName:@"Shift"];
 }
 
