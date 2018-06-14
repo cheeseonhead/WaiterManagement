@@ -12,6 +12,10 @@
 @implementation Shift
 
 - (NSDate *)end {
+	
+	
+	
+	// This is an awesome comment
     NSDate * end = [self.start dateByAddingTimeInterval:self.duration.doubleValue];
     
     return end;
