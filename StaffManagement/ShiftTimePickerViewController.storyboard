@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d3g-Wf-pn9">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shift Time Picker View Controller-->
+        <scene sceneID="8bZ-11-P38">
+            <objects>
+                <viewController id="d3g-Wf-pn9" customClass="ShiftTimePickerViewController" customModule="StaffManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KaF-9h-p6k"/>
+                        <viewControllerLayoutGuide type="bottom" id="J0E-ZA-fS4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZOv-EP-sSo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPz-ag-1k0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="ECk-7y-MNW">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="CCy-aj-p9T">
+                                            <connections>
+                                                <action selector="cancelTapped:" destination="d3g-Wf-pn9" id="UKT-Jc-ErA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Confirm" id="AjZ-0v-IAG">
+                                            <connections>
+                                                <action selector="submitTapped:" destination="d3g-Wf-pn9" id="qiK-R5-cKF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="KxX-2z-qv7" userLabel="StartTime">
+                                <rect key="frame" x="0.0" y="123.5" width="320" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="yQm-QA-gNb"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="543805097.18484998">
+                                    <!--2018-03-27 00:58:17 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1800" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTk-Qr-HkK" userLabel="Duration">
+                                <rect key="frame" x="0.0" y="321.5" width="320" height="128.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="a0P-sn-k2a"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="543805105.23834395">
+                                    <!--2018-03-27 00:58:25 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRl-yU-rk6">
+                                <rect key="frame" x="120" y="94" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTx-0g-zFt">
+                                <rect key="frame" x="127" y="292" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gox-bf-hWx" userLabel="TopSpacer">
+                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="yQV-Xi-bJI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRH-Bt-Qmf" userLabel="BotSpacer">
+                                <rect key="frame" x="16" y="450" width="288" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gox-bf-hWx" secondAttribute="trailing" id="2LV-Pq-aLG"/>
+                            <constraint firstItem="tRH-Bt-Qmf" firstAttribute="leading" secondItem="ZOv-EP-sSo" secondAttribute="leadingMargin" id="4ef-xi-Nxj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tRH-Bt-Qmf" secondAttribute="trailing" id="4tD-t0-6Ti"/>
+                            <constraint firstItem="KxX-2z-qv7" firstAttribute="top" secondItem="SRl-yU-rk6" secondAttribute="bottom" constant="8" id="ESU-Ya-sdR"/>
+                            <constraint firstItem="J0E-ZA-fS4" firstAttribute="top" secondItem="tRH-Bt-Qmf" secondAttribute="bottom" id="KYI-YO-tf8"/>
+                            <constraint firstItem="UTx-0g-zFt" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="ON6-ZS-bq7"/>
+                            <constraint firstItem="tRH-Bt-Qmf" firstAttribute="height" secondItem="gox-bf-hWx" secondAttribute="height" id="QLJ-aj-f1J"/>
+                            <constraint firstItem="tRH-Bt-Qmf" firstAttribute="top" secondItem="qTk-Qr-HkK" secondAttribute="bottom" id="WFR-1u-hWb"/>
+                            <constraint firstItem="KxX-2z-qv7" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="Wzz-P6-6Qy"/>
+                            <constraint firstItem="gox-bf-hWx" firstAttribute="leading" secondItem="ZOv-EP-sSo" secondAttribute="leading" id="XSh-fc-MPg"/>
+                            <constraint firstItem="KxX-2z-qv7" firstAttribute="height" secondItem="qTk-Qr-HkK" secondAttribute="height" id="ZVL-P5-vvW"/>
+                            <constraint firstItem="qTk-Qr-HkK" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="dRX-Yq-U9Z"/>
+                            <constraint firstItem="SRl-yU-rk6" firstAttribute="centerX" secondItem="ZOv-EP-sSo" secondAttribute="centerX" id="gXM-Em-tHr"/>
+                            <constraint firstItem="UTx-0g-zFt" firstAttribute="top" secondItem="KxX-2z-qv7" secondAttribute="bottom" constant="40" id="i80-oI-RoJ"/>
+                            <constraint firstItem="SRl-yU-rk6" firstAttribute="top" secondItem="gox-bf-hWx" secondAttribute="bottom" id="jFP-al-5IX"/>
+                            <constraint firstItem="kPz-ag-1k0" firstAttribute="bottom" secondItem="gox-bf-hWx" secondAttribute="top" id="jm6-hZ-PeB"/>
+                            <constraint firstItem="kPz-ag-1k0" firstAttribute="top" secondItem="KaF-9h-p6k" secondAttribute="bottom" id="kt1-YI-fHj"/>
+                            <constraint firstItem="qTk-Qr-HkK" firstAttribute="top" secondItem="UTx-0g-zFt" secondAttribute="bottom" constant="8" id="nEO-qn-cls"/>
+                            <constraint firstAttribute="trailing" secondItem="kPz-ag-1k0" secondAttribute="trailing" id="sOO-r7-468"/>
+                            <constraint firstItem="kPz-ag-1k0" firstAttribute="leading" secondItem="ZOv-EP-sSo" secondAttribute="leading" id="wDt-hg-eC7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="durationPicker" destination="qTk-Qr-HkK" id="aCI-EU-94l"/>
+                        <outlet property="startTimePicker" destination="KxX-2z-qv7" id="QZ2-Ub-d2U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eY-PM-vfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89" y="176"/>
+        </scene>
+    </scenes>
+</document>

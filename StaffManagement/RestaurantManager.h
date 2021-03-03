@@ -7,8 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Restaurant.h"
+#import <CoreData/CoreData.h>
+
+@class Restaurant;
+@class Waiter;
+@class Shift;
+
 @interface RestaurantManager : NSObject
-+ (id)sharedManager;
--(Restaurant*)currentRestaurant;
++ (instancetype)sharedManager;
+
+#pragma mark - CREATE
+- (Restaurant *)createRestaurant:(NSString *)name;
+- (Waiter *)createWaiter:(NSString *)name;
+- (Shift *)createShift:(NSDate*)start duration:(NSTimeInterval)duration;
+
+#pragma mark - GET
+- (Restaurant*)currentRestaurant;
+- (NSArray<Restaurant*>*)restaurants;
+- (NSArray<Waiter*>*)waitersNamed:(NSString *)name;
+
+#pragma mark - POST
+- (void)save;
+
+#pragma mark - DELETE
+- (void)delete:(NSManagedObject *)object;
+
 @end

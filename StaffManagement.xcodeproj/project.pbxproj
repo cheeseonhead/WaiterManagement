@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34584F4720698884009EA8A9 /* ShiftViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34584F4620698884009EA8A9 /* ShiftViewController.storyboard */; };
+		34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F4820698893009EA8A9 /* ShiftViewController.swift */; };
+		34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */; };
+		34584F5D2069A4DF009EA8A9 /* Waiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F5B2069A4DF009EA8A9 /* Waiter.m */; };
+		34584F642069CE83009EA8A9 /* ShiftTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */; };
+		34584F662069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */; };
+		34584F6C2069D95D009EA8A9 /* Shift.m in Sources */ = {isa = PBXBuildFile; fileRef = 34584F6A2069D95D009EA8A9 /* Shift.m */; };
+		34584F6F2069E7D9009EA8A9 /* RestaurantDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */; };
+		34584F71206AF323009EA8A9 /* Shift+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F70206AF323009EA8A9 /* Shift+Comparable.swift */; };
+		34584F73206AF41A009EA8A9 /* ShiftScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */; };
+		34584F75206AF9BF009EA8A9 /* Date+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34584F74206AF9BF009EA8A9 /* Date+Compare.swift */; };
+		3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */; };
+		3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4C82069482900C05A59 /* Collection+Sort.swift */; };
+		3499C4CC2069579C00C05A59 /* UIAlertController+QuickMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */; };
 		651CBBAF1AB4E1CC00F265E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBAE1AB4E1CC00F265E8 /* main.m */; };
 		651CBBB21AB4E1CC00F265E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBB11AB4E1CC00F265E8 /* AppDelegate.m */; };
 		651CBBB51AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBB31AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld */; };
@@ -17,7 +31,6 @@
 		651CBBCC1AB4E1CD00F265E8 /* StaffManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBCB1AB4E1CD00F265E8 /* StaffManagementTests.m */; };
 		651CBBD71AB4E31400F265E8 /* RestaurantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBD61AB4E31400F265E8 /* RestaurantManager.m */; };
 		651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBD91AB4E4A000F265E8 /* Restaurant.m */; };
-		651CBBDD1AB4E4A100F265E8 /* Waiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CBBDC1AB4E4A100F265E8 /* Waiter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +44,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34584F4620698884009EA8A9 /* ShiftViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShiftViewController.storyboard; sourceTree = "<group>"; };
+		34584F4820698893009EA8A9 /* ShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewController.swift; sourceTree = "<group>"; };
+		34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewControllerDataSource.swift; sourceTree = "<group>"; };
+		34584F582069A4DF009EA8A9 /* Waiter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Waiter.h; sourceTree = "<group>"; };
+		34584F5B2069A4DF009EA8A9 /* Waiter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Waiter.m; sourceTree = "<group>"; };
+		34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTimePickerViewController.swift; sourceTree = "<group>"; };
+		34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShiftTimePickerViewController.storyboard; sourceTree = "<group>"; };
+		34584F672069D95D009EA8A9 /* Shift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shift.h; sourceTree = "<group>"; };
+		34584F6A2069D95D009EA8A9 /* Shift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shift.m; sourceTree = "<group>"; };
+		34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDataSource.swift; sourceTree = "<group>"; };
+		34584F70206AF323009EA8A9 /* Shift+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shift+Comparable.swift"; sourceTree = "<group>"; };
+		34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftScheduler.swift; sourceTree = "<group>"; };
+		34584F74206AF9BF009EA8A9 /* Date+Compare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Compare.swift"; sourceTree = "<group>"; };
+		3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StaffManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDataSource.swift; sourceTree = "<group>"; };
+		3499C4C82069482900C05A59 /* Collection+Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Sort.swift"; sourceTree = "<group>"; };
+		3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIAlertController+QuickMake.swift"; path = "StaffManagement/Extensions/UIAlertController+QuickMake.swift"; sourceTree = SOURCE_ROOT; };
 		651CBBA91AB4E1CC00F265E8 /* StaffManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaffManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651CBBAD1AB4E1CC00F265E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		651CBBAE1AB4E1CC00F265E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,8 +79,6 @@
 		651CBBD61AB4E31400F265E8 /* RestaurantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantManager.m; sourceTree = "<group>"; };
 		651CBBD81AB4E4A000F265E8 /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
 		651CBBD91AB4E4A000F265E8 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
-		651CBBDB1AB4E4A100F265E8 /* Waiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Waiter.h; sourceTree = "<group>"; };
-		651CBBDC1AB4E4A100F265E8 /* Waiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Waiter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +99,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34584F6D2069E7C2009EA8A9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				34584F6E2069E7D9009EA8A9 /* RestaurantDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3499C4CA2069496300C05A59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3499C4C82069482900C05A59 /* Collection+Sort.swift */,
+				3499C4CB2069579C00C05A59 /* UIAlertController+QuickMake.swift */,
+				34584F70206AF323009EA8A9 /* Shift+Comparable.swift */,
+				34584F74206AF9BF009EA8A9 /* Date+Compare.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		651CBBA01AB4E1CC00F265E8 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +145,20 @@
 				651CBBD61AB4E31400F265E8 /* RestaurantManager.m */,
 				651CBBB61AB4E1CD00F265E8 /* ViewController.h */,
 				651CBBB71AB4E1CD00F265E8 /* ViewController.m */,
+				3499C4C62069440800C05A59 /* ViewControllerDataSource.swift */,
+				34584F4820698893009EA8A9 /* ShiftViewController.swift */,
+				34584F4A206999AB009EA8A9 /* ShiftViewControllerDataSource.swift */,
+				34584F632069CE83009EA8A9 /* ShiftTimePickerViewController.swift */,
+				34584F72206AF41A009EA8A9 /* ShiftScheduler.swift */,
+				34584F4620698884009EA8A9 /* ShiftViewController.storyboard */,
+				34584F652069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard */,
 				651CBBB91AB4E1CD00F265E8 /* Main.storyboard */,
-				651CBBBC1AB4E1CD00F265E8 /* Images.xcassets */,
 				651CBBBE1AB4E1CD00F265E8 /* LaunchScreen.xib */,
+				34584F6D2069E7C2009EA8A9 /* Protocols */,
+				3499C4CA2069496300C05A59 /* Extensions */,
 				651CBBDE1AB4E4AC00F265E8 /* Core Data */,
+				651CBBBC1AB4E1CD00F265E8 /* Images.xcassets */,
+				3499C4C3206942E900C05A59 /* StaffManagement-Bridging-Header.h */,
 				651CBBAC1AB4E1CC00F265E8 /* Supporting Files */,
 			);
 			path = StaffManagement;
@@ -136,13 +193,15 @@
 		651CBBDE1AB4E4AC00F265E8 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				651CBBB31AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld */,
-				651CBBDB1AB4E4A100F265E8 /* Waiter.h */,
-				651CBBDC1AB4E4A100F265E8 /* Waiter.m */,
+				34584F672069D95D009EA8A9 /* Shift.h */,
+				34584F6A2069D95D009EA8A9 /* Shift.m */,
 				651CBBD81AB4E4A000F265E8 /* Restaurant.h */,
 				651CBBD91AB4E4A000F265E8 /* Restaurant.m */,
+				651CBBB31AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld */,
+				34584F582069A4DF009EA8A9 /* Waiter.h */,
+				34584F5B2069A4DF009EA8A9 /* Waiter.m */,
 			);
-			name = "Core Data";
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +253,7 @@
 				TargetAttributes = {
 					651CBBA81AB4E1CC00F265E8 = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0920;
 					};
 					651CBBC41AB4E1CD00F265E8 = {
 						CreatedOnToolsVersion = 6.2;
@@ -225,8 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34584F662069CE91009EA8A9 /* ShiftTimePickerViewController.storyboard in Resources */,
 				651CBBBB1AB4E1CD00F265E8 /* Main.storyboard in Resources */,
 				651CBBC01AB4E1CD00F265E8 /* LaunchScreen.xib in Resources */,
+				34584F4720698884009EA8A9 /* ShiftViewController.storyboard in Resources */,
 				651CBBBD1AB4E1CD00F265E8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,12 +307,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34584F71206AF323009EA8A9 /* Shift+Comparable.swift in Sources */,
 				651CBBD71AB4E31400F265E8 /* RestaurantManager.m in Sources */,
+				3499C4CC2069579C00C05A59 /* UIAlertController+QuickMake.swift in Sources */,
 				651CBBB51AB4E1CD00F265E8 /* StaffManagement.xcdatamodeld in Sources */,
 				651CBBB21AB4E1CC00F265E8 /* AppDelegate.m in Sources */,
+				34584F75206AF9BF009EA8A9 /* Date+Compare.swift in Sources */,
 				651CBBB81AB4E1CD00F265E8 /* ViewController.m in Sources */,
-				651CBBDD1AB4E4A100F265E8 /* Waiter.m in Sources */,
+				3499C4C92069482900C05A59 /* Collection+Sort.swift in Sources */,
+				3499C4C72069440800C05A59 /* ViewControllerDataSource.swift in Sources */,
+				34584F4B206999AB009EA8A9 /* ShiftViewControllerDataSource.swift in Sources */,
+				34584F6F2069E7D9009EA8A9 /* RestaurantDataSource.swift in Sources */,
+				34584F642069CE83009EA8A9 /* ShiftTimePickerViewController.swift in Sources */,
+				34584F73206AF41A009EA8A9 /* ShiftScheduler.swift in Sources */,
+				34584F4920698893009EA8A9 /* ShiftViewController.swift in Sources */,
+				34584F5D2069A4DF009EA8A9 /* Waiter.m in Sources */,
 				651CBBDA1AB4E4A000F265E8 /* Restaurant.m in Sources */,
+				34584F6C2069D95D009EA8A9 /* Shift.m in Sources */,
 				651CBBAF1AB4E1CC00F265E8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,10 +465,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StaffManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TouchBistro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StaffManagement/StaffManagement-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -403,16 +480,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StaffManagement/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TouchBistro.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StaffManagement/StaffManagement-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		651CBBD31AB4E1CD00F265E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -433,6 +514,7 @@
 		651CBBD41AB4E1CD00F265E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
